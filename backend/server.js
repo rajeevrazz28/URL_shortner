@@ -5,9 +5,9 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5080;
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://r4zz28:r4zz28@urlshortner.py76upf.mongodb.net/?appName=URLshortner';
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
-const BACKEND_URL=process.env.BACKEND_URL;
+const BACKEND_URL=process.env.BACKEND_URL || `http://localhost:${PORT}`;
 
 // Middleware
 app.use(cors({
